@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      food_option:
+        one: Opção de Comida
+        other: Opções de Comidas
+    attributes:
+      food_option:
+        description: Descrição

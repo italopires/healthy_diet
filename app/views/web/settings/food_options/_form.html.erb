@@ -1,0 +1,12 @@
+<%= render 'layouts/errors', resource: @food_option %>
+<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+  <div class="pmd-card-body">
+    <%= simple_form_for [:settings, @food_option] do |f| %>
+      <%= f.input :description, input_html: { class: 'form-control' },
+                  wrapper_html: { class: 'pmd-textfield' } %>
+
+      <%= render 'layouts/common/buttons/back', link: settings_food_options_path %>
+      <%= render 'layouts/common/buttons/submit' %>
+    <% end %>
+  </div>
+</div>

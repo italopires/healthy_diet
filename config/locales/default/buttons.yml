@@ -1,0 +1,15 @@
+---
+pt-BR:
+  buttons:
+    back: Voltar
+    destroy:
+      alt: Excluir
+      confirm: Você tem certeza?
+    edit:
+      alt: Alterar
+    filter: Pesquisar
+    new: Adicionar
+    print: Imprimir
+    submit:
+      text: Salvar
+    cancel: Cancelar

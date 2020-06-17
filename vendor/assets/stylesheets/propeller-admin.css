@@ -11,7 +11,8 @@ body, html{ height:100%;}
 .pmd-navbar.navbar .btn.pmd-btn-fab:hover, .pmd-navbar.navbar .btn.pmd-btn-fab:focus, .pmd-navbar.navbar .btn.pmd-btn-fab.focus { color: #fff;}
 
 /*========================== header css ===========================*/
-.navbar-inverse{ background-color:#4285f4; border-color:#4285f4;}
+/*.navbar-inverse{ background-color:#FFFFFF; border-color:#4285f4;}*/
+
 .navbar-inverse .navbar-brand svg{ display:inline-block; float:left; vertical-align:top;}
 @media (max-width: 767px) {
 	.navbar-brand > svg{ height:40px; width:auto;}

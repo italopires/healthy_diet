@@ -6,11 +6,11 @@
         <div class="media-left">
           <%= image_tag("user-icon") %>
         </div>
-        <div class="media-body media-middle">Username</div>
+        <div class="media-body media-middle"><%= current_user.email %></div>
         <div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
       </a>
       <ul class="dropdown-menu">
-        <li><a href="login.html">Logout</a></li>
+        <li><%= link_to "Sair", destroy_user_session_path %></li>
       </ul>
     </li><!-- End user info -->
 

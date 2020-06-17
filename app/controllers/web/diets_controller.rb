@@ -2,17 +2,17 @@ class Web::DietsController < ApplicationController
   before_action :set_diet, only: [:edit, :update, :destroy]
 
   def index
-    @diets = Diet.all
+    @diets = current_user.diets
   end
 
   def new
-    @diet = Diet.new
+    @diet = current_user.diets.build
     @diet.meals.build
     @food_options = FoodOption.all
   end
 
   def create
-    @diet = Diet.new food_option_params
+    @diet = current_user.diets.build food_option_params
 
     if @diet.save
       redirect_to diets_path, notice: t('notices.created', model: Diet.model_name.human)

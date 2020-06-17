@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      meal:
+        one: Refeição
+        other: Refeições
+    attributes:
+      meal:
+        description: Descrição
+        schedule_time: Horário
+        kind: Refeição

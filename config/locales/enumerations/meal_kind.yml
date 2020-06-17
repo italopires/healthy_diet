@@ -1,0 +1,7 @@
+pt-BR:
+  enumerations:
+    meal_kind:
+      lunch: Almoço
+      dinner: Janta
+      supper: Ceia
+      scnack: Lanche

@@ -34,7 +34,7 @@ class Web::Settings::FoodOptionsController < ApplicationController
     if @food_option.destroy
       redirect_to settings_food_options_path, notice: t('notices.destroyed', model: FoodOption.model_name.human)
     else
-      redirect_to settings_indicator_profiles_path, alert: t('notices.destroy_restricted', model: FoodOption.model_name.human)
+      redirect_to settings_food_options_path, alert: t('notices.destroy_restricted', model: FoodOption.model_name.human)
     end
   end
 

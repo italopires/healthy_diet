@@ -39,10 +39,15 @@ gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'simple_form'
+# Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
+gem 'cocoon'
+gem 'enumerate_it'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
+  gem 'pry-rails'
 end
 
 group :development do

@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      diet:
+        one: Dieta
+        other: Dietas
+    attributes:
+      diet:
+        description: Nome da Dieta

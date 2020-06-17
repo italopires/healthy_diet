@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login' } , controllers: { sessions: :sessions, passwords: :passwords }
 
   scope module: :web do
+    resources :diets
     namespace :settings do
       resources :food_options
     end

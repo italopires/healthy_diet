@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap/bootstrap
 //= require propeller
+//= require cocoon
 //= require_tree ./web

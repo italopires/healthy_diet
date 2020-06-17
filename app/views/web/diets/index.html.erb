@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'layouts/common/header', title: Diet.model_name.human(count: 2), subtitle: '' %>
+      <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+        <% if @diets.each do |diet| %>
+          <li class="list-group-item">
+            <div class="media-body">
+              <h3 class="list-group-item-heading">
+                <%= diet.description %>
+              </h3>
+            </div>
+
+            <%= render 'layouts/common/icon_links/edit', link: edit_diet_path(diet) %>
+            <%= render 'layouts/common/icon_links/destroy', link: diet_path(diet) %>
+          </li>
+        <% end.empty? %>
+          <li class="list-group-item">
+            <div class="media-body">
+              <h3 class="list-group-item-heading">
+                <%= t('core.empty') %>
+              </h3>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+
+      <div id="list-action-buttons">
+        <%= render 'layouts/common/buttons/new', link: new_diet_path %>
+      </div>
+    </div>
+  </div>
+</div>

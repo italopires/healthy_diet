@@ -392,7 +392,6 @@ h2.typo-fill-secondary{ color:rgba(77, 87, 93, 0.68); font-size:22px;}
 .forgot-password-card h3{ color:rgba(0, 0, 0, 0.87); font-size:16px; margin-top:0; margin-bottom:20px;}
 .login-card .card-body,
 .register-card .card-body{ padding-bottom:10px; margin:0;}
-.register-card, .forgot-password-card{ display:none;}
 .register-card, .login-card, .forgot-password-card{ position:relative;}
 .register-card h3 span,
 .login-card h3 span{ color:rgba(0, 0, 0, 0.54);}

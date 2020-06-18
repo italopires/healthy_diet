@@ -1,4 +1,5 @@
-<div class="login-card">
+<%= flash[:alert].html_safe if flash[:alert].present? %>
+<div class="login-card" style="<%= devise_sign_in? %>">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="pmd-card-title card-header-border text-center">
       <div class="loginlogo">
@@ -46,7 +47,7 @@
     </div>
   <% end %>
 </div>
-<div class="register-card">
+<div class="register-card" style="<%= devise_sign_up? %>">
   <div class="pmd-card-title card-header-border text-center">
     <div class="loginlogo">
       <a href="javascript:void(0);"><%= image_tag 'maida_logo.svg', alt: 'logo', width: "200" %></a>
@@ -55,7 +56,6 @@
   </div>
   <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name)) do |f| %>
     <div class="pmd-card-body">
-
       <div class="form-group pmd-textfield pmd-textfield-floating-label">
         <%= f.label :email, class: 'control-label pmd-input-group-label' %><br />
 
@@ -64,7 +64,6 @@
           <%= f.text_field :email, class: 'form-control', autofocus: true, autocomplete: "login" %>
         </div>
       </div>
-
 
       <div class="form-group pmd-textfield pmd-textfield-floating-label">
         <%= f.label :password, class: 'control-label pmd-input-group-label' %><br />

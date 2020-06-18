@@ -12,7 +12,7 @@ class Web::Settings::FoodOptionsController < ApplicationController
   def create
     @food_option = current_user.food_options.build food_option_params
 
-    if @food_option.save
+    if @food_option.save!
       redirect_to settings_food_options_path, notice: t('notices.created', model: FoodOption.model_name.human)
     else
       render :new
@@ -23,7 +23,7 @@ class Web::Settings::FoodOptionsController < ApplicationController
   end
 
   def update
-    if @food_option.update(food_option_params)
+    if @food_option.update!(food_option_params)
       redirect_to settings_food_options_path, notice: t('notices.updated', model: FoodOption.model_name.human)
     else
       render :edit

@@ -1,15 +1,15 @@
 <div class="nested-fields">
   <div class="form-inline">
-        <%= f.input :description, label: Meal.human_attribute_name(:description), input_html: { class: 'form-control'},
+    <%= f.input :kind, as: :select, collection: MealKind.to_a, input_html: { class: 'form-control', include_blank: true },
+                wrapper_html: { class: 'form-group pmd-textfield' } %>
+    <%= f.input :schedule_time, as: :string, label: Meal.human_attribute_name(:schedule_time), input_html: { class: 'form-control'},
+                wrapper_html: { class: 'form-group pmd-textfield' } %>
+    <%= f.input :description, label: Meal.human_attribute_name(:description), input_html: { class: 'form-control'},
                     wrapper_html: { class: 'form-group pmd-textfield' } %>
-        <%= f.input :schedule_time, as: :string, label: Meal.human_attribute_name(:schedule_time), input_html: { class: 'form-control'},
-                wrapper_html: { class: 'form-group pmd-textfield' } %>
 
-        <%= f.input :kind, as: :select, collection: MealKind.to_a, input_html: { class: 'form-control', include_blank: true },
-                wrapper_html: { class: 'form-group pmd-textfield' } %>
-        <%= link_to_remove_association f, class: "btn btn-danger  pmd-btn-raised pmd-ripple-effect" do %>
-          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remover
-        <% end %>
+    <%= link_to_remove_association f, class: "btn btn-danger  pmd-btn-raised pmd-ripple-effect" do %>
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remover
+    <% end %>
 
   </div>
   <div class="meal-options">

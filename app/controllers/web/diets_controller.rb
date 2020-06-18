@@ -14,7 +14,7 @@ class Web::DietsController < ApplicationController
   def create
     @diet = current_user.diets.build food_option_params
 
-    if @diet.save
+    if @diet.save!
       redirect_to diets_path, notice: t('notices.created', model: Diet.model_name.human)
     else
       render :new
@@ -26,7 +26,7 @@ class Web::DietsController < ApplicationController
   end
 
   def update
-    if @diet.update(food_option_params)
+    if @diet.update!(food_option_params)
       redirect_to diets_path, notice: t('notices.updated', model: Diet.model_name.human)
     else
       render :edit

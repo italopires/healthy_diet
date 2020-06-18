@@ -2,15 +2,15 @@ class Web::Settings::FoodOptionsController < ApplicationController
   before_action :set_food_option, only: [:edit, :update, :destroy]
 
   def index
-    @food_options = FoodOption.all
+    @food_options = current_user.food_options
   end
 
   def new
-    @food_option = FoodOption.new
+    @food_option = current_user.food_options.build
   end
 
   def create
-    @food_option = FoodOption.new food_option_params
+    @food_option = current_user.food_options.build food_option_params
 
     if @food_option.save
       redirect_to settings_food_options_path, notice: t('notices.created', model: FoodOption.model_name.human)
@@ -41,7 +41,7 @@ class Web::Settings::FoodOptionsController < ApplicationController
   private
 
   def set_food_option
-    @food_option = FoodOption.find(params[:id])
+    @food_option = current_user.food_options.find(params[:id])
   end
 
   def food_option_params

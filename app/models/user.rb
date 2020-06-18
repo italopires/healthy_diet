@@ -5,5 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :registerable
 
   has_many :diets
+  has_many :food_options
+
   validates :email, presence: true
 end

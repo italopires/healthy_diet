@@ -44,7 +44,7 @@ class Web::DietsController < ApplicationController
   private
 
   def set_diet
-    @diet = Diet.find(params[:id])
+    @diet = current_user.diets.find(params[:id])
   end
 
   def food_option_params

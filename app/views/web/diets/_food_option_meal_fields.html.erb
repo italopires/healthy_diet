@@ -1,7 +1,8 @@
 <div class="nested-fields">
   <div class="form-inline">
-    <%= f.input :food_option_id, as: :select, label: FoodOption.human_attribute_name(:description), collection: @food_options, input_html: { class: 'form-control', include_blank: true },
-              wrapper_html: { class: 'form-group pmd-textfield' } %>
+    <%= f.input :food_option_id, as: :select, label: FoodOption.human_attribute_name(:description), collection: @food_options,
+                input_html: { class: 'form-control', include_blank: true },
+                wrapper_html: { class: 'form-group pmd-textfield' } %>
 
     <%= link_to_remove_association f, class: "btn btn-danger pmd-btn-raised pmd-ripple-effect" do %>
       <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remover

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$('#meals').on('cocoon:after-insert', function(e, insertedItem, originalEvent) {
   $('.datepicker').datepicker({
     language: 'pt-BR',
     autoclose: true,

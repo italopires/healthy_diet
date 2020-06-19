@@ -3,17 +3,23 @@
   <div class="pmd-card-body">
     <%= simple_form_for @diet do |f| %>
       <%= f.input :description, input_html: { class: 'form-control' },
-                  wrapper_html: { class: 'pmd-textfield' } %>
+                  wrapper_html: { class: 'pmd-textfield col-md-4' } %>
+      <%= f.input :initial_date, as: :string, input_html: { class: 'form-control datepicker',
+                                                            value: "#{f.object.initial_date.strftime("%d/%m/%Y") if f.object.initial_date.present?}"},
+                  wrapper_html: { class: 'pmd-textfield col-md-4' } %>
+      <%= f.input :final_date, as: :string, input_html: { class: 'form-control datepicker',
+                                                          value: "#{f.object.final_date.strftime("%d/%m/%Y") if f.object.final_date.present?}"},
+                  wrapper_html: { class: 'pmd-textfield col-md-4' } %>
 
       <div id="meals">
         <%= f.simple_fields_for :meals do |meal| %>
           <%= render partial: 'meal_fields', locals: { f: meal } %>
         <% end %>
+        <div class="links">
+          <%= link_to_add_association 'adicionar refeição', f, :meals, class: "btn btn-info pmd-btn-raised pmd-ripple-effect" %>
+        </div>
       </div>
 
-      <div class="links">
-        <%= link_to_add_association 'adicionar refeição', f, :meals, class: "btn btn-info pmd-btn-raised pmd-ripple-effect" %>
-      </div>
 
       <%= render 'layouts/common/buttons/back', link: diets_path %>
       <%= render 'layouts/common/buttons/submit' %>

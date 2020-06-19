@@ -2,7 +2,9 @@
   <div class="form-inline">
     <%= f.input :kind, as: :select, collection: MealKind.to_a, input_html: { class: 'form-control', include_blank: true },
                 wrapper_html: { class: 'form-group pmd-textfield' } %>
-    <%= f.input :schedule_time, as: :string, label: Meal.human_attribute_name(:schedule_time), input_html: { class: 'form-control datetime-mask', value: "#{f.object.schedule_time.strftime('%H:%M:%S') if f.object.schedule_time.present?}"  },
+    <%= f.input :schedule_time, as: :string, label: Meal.human_attribute_name(:schedule_time),
+                input_html: { class: 'form-control datetime-mask',
+                              value: "#{f.object.schedule_time.strftime('%H:%M:%S') if f.object.schedule_time.present?}"  },
                 wrapper_html: { class: 'form-group pmd-textfield' } %>
     <%= f.input :description, label: Meal.human_attribute_name(:description), input_html: { class: 'form-control'},
                     wrapper_html: { class: 'form-group pmd-textfield' } %>

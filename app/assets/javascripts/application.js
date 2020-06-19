@@ -15,4 +15,7 @@
 //= require bootstrap/bootstrap
 //= require propeller
 //= require cocoon
+//= require jquery-mask/inputmask.js
+//= require jquery-mask/inputmask.date.extensions.js
+//= require_tree ./common
 //= require_tree ./web

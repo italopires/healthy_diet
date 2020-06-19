@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   root :to => 'web/diets#index'
 
   scope module: :web do
-    resources :diets, except: :show
+    resources :diets, except: :show do
+      resources :weight_movements, except: :show
+    end
     namespace :settings do
       resources :food_options, except: :show
     end

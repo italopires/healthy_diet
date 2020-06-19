@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      weight_movement:
+        one: Movimentação de peso
+        other: Movimentações de pesos
+    attributes:
+      weight_movement:
+        weight: Peso
+        reference_date: Dia

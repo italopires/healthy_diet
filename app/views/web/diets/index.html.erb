@@ -10,7 +10,9 @@
                 <%= diet.description %>
               </h3>
             </div>
-
+            <%= link_to diet_weight_movements_path(diet), class: "media-right media-middle" do %>
+              <i class="material-icons pmd-sm">note_add</i>
+            <% end %>
             <%= render 'layouts/common/icon_links/edit', link: edit_diet_path(diet) %>
             <%= render 'layouts/common/icon_links/destroy', link: diet_path(diet) %>
           </li>

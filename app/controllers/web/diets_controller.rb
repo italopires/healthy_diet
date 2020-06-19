@@ -51,7 +51,7 @@ class Web::DietsController < ApplicationController
   end
 
   def food_option_params
-    params.require(:diet).permit(:description, :initial_date, :final_date,
+    params.require(:diet).permit(:description, :initial_date, :final_date, :goal_weight,
                                  meals_attributes: [:id, :schedule_time, :description, :kind, :diet_id, :_destroy,
                                  food_option_meals_attributes: [:id, :description, :meal_id, :food_option_id, :_destroy]])
   end

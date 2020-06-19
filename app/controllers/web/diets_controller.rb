@@ -1,5 +1,6 @@
 class Web::DietsController < ApplicationController
   before_action :set_diet, only: [:edit, :update, :destroy]
+  before_action :set_food_options, only: [:new, :create, :edit, :update]
 
   def index
     @diets = current_user.diets
@@ -8,25 +9,23 @@ class Web::DietsController < ApplicationController
   def new
     @diet = current_user.diets.build
     @diet.meals.build
-    @food_options = FoodOption.all
   end
 
   def create
     @diet = current_user.diets.build food_option_params
 
-    if @diet.save!
+    if @diet.save
       redirect_to diets_path, notice: t('notices.created', model: Diet.model_name.human)
     else
-      render :new
+      render :new, alert: 'asdfs'
     end
   end
 
   def edit
-    @food_options = FoodOption.all
   end
 
   def update
-    if @diet.update!(food_option_params)
+    if @diet.update(food_option_params)
       redirect_to diets_path, notice: t('notices.updated', model: Diet.model_name.human)
     else
       render :edit
@@ -42,6 +41,10 @@ class Web::DietsController < ApplicationController
   end
 
   private
+
+  def set_food_options
+    @food_options = current_user.food_options
+  end
 
   def set_diet
     @diet = current_user.diets.find(params[:id])

@@ -7,3 +7,9 @@ pt-BR:
     attributes:
       diet:
         description: Nome da Dieta
+        meals: Refeição
+      diet/meals:
+        meal_id: Refeição
+        description: Descrição
+        schedule_time: Horário
+        kind: Refeição

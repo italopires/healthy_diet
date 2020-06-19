@@ -3,7 +3,7 @@ class Diet < ApplicationRecord
   belongs_to :user
 
   validates :description, presence: true
-
+  validates :meals, :presence => true
   accepts_nested_attributes_for :meals,
                                 reject_if: :all_blank, allow_destroy: true
 end

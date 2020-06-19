@@ -9,3 +9,7 @@ pt-BR:
         description: Descrição
         schedule_time: Horário
         kind: Refeição
+      meals:
+        food_option_meals: Opções
+      meals/food_option_meals:
+        food_option: Opção

@@ -2,6 +2,12 @@
   <div class="row">
     <div class="col-md-12">
       <%= render 'layouts/common/header', title: Diet.model_name.human(count: 2), subtitle: '' %>
+      <div class="alert alert-warning" role="alert"> Deve-se cadastrar
+        <%= link_to settings_food_options_path, class: 'pmd-ripple-effect alert-link' do %>
+          <%= FoodOption.model_name.human(count: 2) %>
+        <% end %>
+        antes de cadastrar uma Dieta.
+      </div>
       <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
         <% if @diets.each do |diet| %>
           <li class="list-group-item">

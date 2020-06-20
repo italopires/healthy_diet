@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_out', to: 'users/sessions#destroy'
   end
-  root :to => 'web/diets#index'
+  root :to => 'web/dashboards#index'
 
   scope module: :web do
     resources :dashboards, only: :index

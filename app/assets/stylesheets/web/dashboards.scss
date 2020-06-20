@@ -1,0 +1,24 @@
+.statistic-img-circle {
+  .dashboard-statistics-icon {
+    color: #3cad44;
+    font-size: 48px;
+    margin-top: 5px;
+  }
+}
+
+.dashboard-component-statistics {
+  h3 {
+    margin-top: 0;
+  }
+  .pmd-card-body {
+    margin-top: 0;
+  }
+}
+
+.statistics ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  li { flex: 1; }
+}

@@ -1,6 +1,7 @@
 class Meal < ApplicationRecord
   belongs_to :diet
   has_many :food_option_meals, inverse_of: :meal, dependent: :destroy
+  has_many :weight_movements, through: :diet, dependent: :destroy
 
   validates :schedule_time, :kind, :description, :food_option_meals, presence: true
 

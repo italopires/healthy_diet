@@ -19,5 +19,6 @@
 //= require cocoon
 //= require jquery-mask/inputmask.js
 //= require jquery-mask/inputmask.date.extensions.js
+//= require Chart.min
 //= require_tree ./common
 //= require_tree ./web

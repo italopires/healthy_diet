@@ -42,6 +42,7 @@ gem 'simple_form'
 # Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
 gem 'cocoon'
 gem 'enumerate_it'
+gem 'chartjs-ror'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
